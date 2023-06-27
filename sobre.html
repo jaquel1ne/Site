@@ -1,36 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
     <link rel="icon" type="image/png" href="./imgs/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
-        <img src="./imgs/logo2.png" alt="logo">
-        <nav>
+        <a href="index.html">
+            <div class="logo-container">
+                <img src="./imgs/logo2.png" alt="logo">
+                <h4>CodKids</h4>
+            </div>
+        </a>
+        <div class="sidebar-menu">
             <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="links.html">Links</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li class="menu-item"><a href="index.html">Página Inicial</a></li>
+                <li class="menu-item"><a href="links.html">Links</a></li>
+                <li class="menu-item"><a href="sobre.html">Sobre</a></li>
             </ul>
-        </nav>
-        <h1>Sobre</h1>
-        <img src="./imgs/background2.png" alt="background2">
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Pesquisar no site...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
     </header>
+
     <main>
-        <section>
+        <section class="banner">
+            <h2 class="h2sobre">Sobre</h2>
+            <img src="./imgs/background2.png" alt="background2">
+            <a href="#sobre" class="scroll-button"><i class="fa fa-chevron-down"></i></a>
+        </section>
+        <section class="sobre" id="sobre">
             <p>O CodKids é um projeto criado para crianças que desejam aprender sobre tecnologia de uma maneira divertida e criativa. Nosso objetivo é incentivar a explorar a programação, ensinando conceitos básicos de uma maneira envolvente e educativa.</p>
             <p>Oferecemos cursos presenciais e virtuais para crianças de até 14 anos, com aulas ministradas por profissionais qualificados e experientes.</p>
             <p>Acreditamos que a programação é uma habilidade essencial no mundo digital de hoje, e é por isso que nos esforçamos para tornar o aprendizado de programação acessível e divertido para todos. Com o CodKids as crianças podem aprender a criar jogos, aplicativos e sites, tudo isso enquanto se divertem e desenvolvem habilidades importantes, como pensamento lógico e resolução de problemas.</p>
-            <p>Se você deseja oferecer uma experiência educativa e divertida em programação para o seu filho, o CodKids é o lugar perfeito para começar. Junte-se a nós e ajude a inspirar a próxima geração de programadores!</p>
+            <p>Se você deseja oferecer uma experiência educativa e divertida em programação para o seu filho, o CodKids é o lugar perfeito para começar. <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXj0MWfRfkx6yZ_49x2gtRG2TkgMinpwfjyLYFWJosg2C-vg/viewform" target="_blank">Junte-se</a> a nós e ajude a inspirar a próxima geração de programadores!</p>
         </section>
     </main>
+
     <footer>
-        <p>Copyright © Jaqueline</p>
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright <span>©</span> Jaqueline</p>
+                <a href="https://www.linkedin.com/in/jaquelinems/" target="_blank"><img src="imgs/link.png" alt="logolinkedin"></a>
+                <a href="https://github.com/jaquel1ne" target="_blank"><img src="imgs/github.png" alt="logogit"></a>
+            </div> 
+        </div>
     </footer>
+
     
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,44 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
     <link rel="icon" type="image/png" href="./imgs/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
-        <img src="./imgs/logo2.png" alt="logo">
-        <nav>
+        <a href="index.html">
+            <div class="logo-container">
+                <img src="./imgs/logo2.png" alt="logo">
+                <h4>CodKids</h4>
+            </div>
+        </a>
+        <div class="sidebar-menu">
             <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="links.html">Links</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li class="menu-item"><a href="index.html">Página Inicial</a></li>
+                <li class="menu-item"><a href="links.html">Links</a></li>
+                <li class="menu-item"><a href="sobre.html">Sobre</a></li>
             </ul>
-        </nav>
-        <h1>Links</h1>
-        <img src="./imgs/background1.png" alt="background1">
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Pesquisar no site...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Ensinar Programação é a Nova Alfabetização</h2>
-            <a href="https://www.youtube.com/watch?v=zBqPg80l7xA">https://www.youtube.com/watch?v=zBqPg80l7xA</a>
-            <p>07/03/2023</p>
-            <h2>Apps de Programação Para Crianças</h2>
-            <a href="https://www.hellomoto.com.br/apps-de-programacao-para-criancas/">www.hellomoto.com.br/apps-de-programacao-para-criancas</a>
-            <p>03/03/2023</p>
-            <h2>7 benefícios do aprendizado de programação e robótica para crianças e adolescentes</h2>
-            <a href="https://happycodeschool.com/blog/7-beneficios-do-aprendizado-de-programacao-e-robotica-para-criancas-e-adolescentes/">https://happycodeschool.com/blog/7-beneficios-do-aprendizado-de-programacao-e-robotica-para-criancas-e-adolescentes</a>
-            <p>02/03/2023</p>
-            <h2>Crianças e adolescentes criam soluções tecnológicas em empreendedorismo</h2>
-            <a href="https://www.oliberal.com/belem/criancas-e-adolescentes-criam-solucoes-tecnologicas-em-empreendedorismo-1.609288">https://www.oliberal.com/belem/criancas-e-adolescentes-criam-solucoes-tecnologicas-em-empreendedorismo-1.609288</a>
-            <p>01/03/2023</p>
-        </section>
-    </main>
-    <footer>
-        <p>Copyright © Jaqueline</p>
-    </footer>
+
     
+    <main>
+        <section class="banner">
+            <h2 class="h2links">Links</h2>
+            <img src="./imgs/background1.png" alt="background1">
+            <a href="#links" class="scroll-button"><i class="fa fa-chevron-down"></i></a>
+        </section>
+        
+        <div class="links" id="links">
+            <h2>• Jogos de Programação para crianças e adolescentes •</h2>
+            <a href="https://ctrlplay.com.br/lista-de-jogos-para-aprender-a-programar/" target="_blank">https://ctrlplay.com.br/lista-de-jogos-para-aprender-a-programar/</a>
+            <p>01/06/2023</p>
+            <h2>• Linguagem de Programação para crianças: veja quais as mais indicadas •</h2>
+            <a href="https://blog.cvdonline.com.br/linguagem-de-programacao-para-criancas/" target="_blank">https://blog.cvdonline.com.br/linguagem-de-programacao-para-criancas/</a>
+            <p>31/05/2023</p>
+            <h2>• Ensinar Programação é a Nova Alfabetização •</h2>
+            <a href="https://www.youtube.com/watch?v=zBqPg80l7xA" target="_blank">https://www.youtube.com/watch?v=zBqPg80l7xA</a>
+            <p>07/05/2023</p>
+            <h2>• Apps de Programação Para Crianças •</h2> 
+            <a href="https://www.hellomoto.com.br/apps-de-programacao-para-criancas/" target="_blank">www.hellomoto.com.br/apps-de-programacao-para-criancas</a>
+            <p>03/05/2023</p>
+            <h2>• 7 benefícios do aprendizado de programação e robótica para crianças e adolescentes •</h2>
+            <a href="https://happycodeschool.com/blog/7-beneficios-do-aprendizado-de-programacao-e-robotica-para-criancas-e-adolescentes/" target="_blank">https://happycodeschool.com/blog/7-beneficios-do-aprendizado-de-programacao-e-robotica-para-criancas-e-adolescentes</a>
+            <p>02/04/2023</p>
+            <h2>• Crianças e adolescentes criam soluções tecnológicas em empreendedorismo •</h2>
+            <a href="https://www.oliberal.com/belem/criancas-e-adolescentes-criam-solucoes-tecnologicas-em-empreendedorismo-1.609288" target="_blank">https://www.oliberal.com/belem/criancas-e-adolescentes-criam-solucoes-tecnologicas-em-empreendedorismo-1.609288</a>
+            <p>01/04/2023</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright <span>©</span> Jaqueline</p>
+                <a href="https://www.linkedin.com/in/jaquelinems/" target="_blank"><img src="imgs/link.png" alt="logolinkedin"></a>
+                <a href="https://github.com/jaquel1ne" target="_blank"><img src="imgs/github.png" alt="logogit"></a>
+            </div> 
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
 </body>
 </html>

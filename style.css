@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400&family=Montserrat:wght@300&family=Roboto+Mono:wght@300;400&family=Roboto:wght@100;300;500;700&family=Urbanist:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #c84b43;
+    padding: 10px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+ .logo-container img {
+    max-height: 85px;
+    max-width: 325px;
+    padding: 10px;
+  }
+   
+ .logo-container h4 {
+    font-size: 15pt;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar-menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li:not(:last-child) {
+    margin-right: 1em;
+}
+
+.sidebar-menu .menu-item a {
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 14pt;
+}
+
+.menu-item {
+    margin: 1.5em;
+}
+
+.menu-item a.active {
+    border-bottom: 10px solid white;
+}
+
+.search-container {
+    position: relative;
+    margin-left: 2%;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+}
+
+#search-input {
+    width: 0;
+    padding: 5px;
+    transition: width 0.3s ease;
+    background-color: transparent;
+    border: none;
+}
+
+#search-input::placeholder {
+    color: #fff;
+    font-size: 11pt;
+}
+
+.search-container.active #search-input {
+    width: 14.2em;
+    padding: 8px;
+}
+
+.search-container.active .search-icon {
+    right: 13.2em;
+}
+
+.banner {
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.banner h1 {
+    color: #b45f06;
+    font-size: 95pt;
+    position: absolute;
+    z-index: 1;
+    padding: 190px;
+}
+
+.banner h2 {
+    color: #990000;
+    font-size: 60pt;
+    position: absolute;
+    padding: 375px 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner img {
+    opacity: 0.5;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner .scroll-button {
+    color: #878b9d; 
+    text-decoration: none;
+    font-family: 'Google Sans'; 
+    font-size: 25px; 
+    position: absolute;
+    padding: 600px;
+    text-align: center;
+    z-index: 1; 
+    animation: scroll-animation 1s infinite; 
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+@keyframes scroll-animation {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(10px); opacity: 0.5; }
+}
+
+.cursos {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cursos h2 {
+    text-align: center;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 25pt;
+    word-wrap: break-word;
+    width: 100%;
+    height: 3em;
+    display: block;
+    position: relative;
+    padding: 25px;
+    background-color: #f0f0f0;
+    color: #1c4587;
+}
+
+.curso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 350px;
+    margin: 20px auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.curso img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 15em;
+}
+
+.curso img:hover {
+    border: 2px solid #990000;
+}
+
+.curso .figcaption {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+    padding: 20px;
+}
+
+.curso h3, .curso p {
+    color: #c84b43;
+}
+
+.curso p:hover {
+    font-size: 15pt;
+    cursor: pointer;
+}
+
+.cursos .button {
+    display: block; 
+    margin: auto; 
+    height: 60px;
+    padding: 10px; 
+    background-color: #c84b43; 
+    border: none; 
+    cursor: pointer; 
+    flex-basis: 100%;
+}
+
+.cursos button a {
+    color: white; 
+    text-decoration: none; 
+    font-size: 20pt;
+    padding: 20px;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.cursos button:hover {
+    background: #a1140d;
+    transition: 1s all;
+    font-size: 10pt;
+    transform: scale(1.2);
+}
+
+.beneficios {
+    position: relative;
+    width: 100%;
+}
+
+.beneficios h2 {
+    text-align: center;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 25pt;
+    word-wrap: break-word;
+    width: 100%;
+    height: 3em;
+    display: block;
+    position: relative;
+    padding: 25px;
+    background-color: #f0f0f0;
+    color: #1c4587;
+    top: 30px;
+}
+
+.beneficios img {
+    display: block;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.beneficios img:hover {
+    opacity: 0.6;
+}
+
+.container-beneficios {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.container-beneficios .icone {
+    max-width: 8%;
+    max-height: 8%;
+    border: none;
+    box-shadow: none;
+    padding: 25px;
+    margin-bottom: -40px;
+}
+
+.container-beneficios p {
+    text-align: justify;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.6;
+    padding: 40px;
+    word-wrap: break-word;
+}
+
+.beneficios strong {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.beneficios iframe {
+    display: block;
+    margin: auto;
+}
+
+.beneficios .lgdvideo {
+    font-family: 'Roboto Mono', sans-serif;
+    color: #c84b43;
+    text-align: center;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.metodologia {
+    position: relative;
+    width: 100%;
+}
+
+.metodologia h2 {
+    text-align: center;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 25pt;
+    word-wrap: break-word;
+    width: 100%;
+    height: 3em;
+    display: block;
+    position: relative;
+    padding: 25px;
+    background-color: #f0f0f0;
+    color: #1c4587;
+    top: 30px;
+}
+
+.container-metodologia {
+    display: flex; 
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 250px;
+    margin: 20px 20px;
+    text-align: center; 
+    gap: 20px;
+    padding: 30px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    width: 300px;
+}   
+
+.metodologia img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.metodologia figcaption {
+    display: block;
+    width: 100%;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    color: #c84b43;
+    margin-top: 10px;
+    text-align: center;
+}
+  
+.metodologia p {
+    margin-top: 10px;
+    font-family: 'Bitter', serif;
+    font-size: 11pt;
+    font-weight: 500;
+    color: rgb(95,99,104);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.metodologia p:hover {
+    font-weight: bolder;
+}
+
+.endereco {
+    position: relative;
+    width: 100%;
+}
+
+.endereco h2 {
+    text-align: center;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 25pt;
+    word-wrap: break-word;
+    width: 100%;
+    height: 3em;
+    display: block;
+    position: relative;
+    padding: 25px;
+    background-color: #f0f0f0;
+    color: #1c4587;
+    top: 100px;
+}
+
+.colunas {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    gap: 100px;
+    justify-content: center;
+    padding: 100px;
+}
+  
+  .colunas strong {
+    font-size: 25px;
+}
+  
+  #direita, #esquerda {
+    color: #c84b43;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+  
+  .wp {
+    display: flex;
+    justify-content: center;
+}
+  
+  .wp a img {
+    margin-top: -11px;
+    max-height: 50px;
+    max-width: 50px;
+}
+  
+  .wp a img:hover {
+    transform: scale(1.3);
+}
+  
+  .email {
+    margin-top: -16px;
+}
+  
+  .endereco iframe {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    align-self: center;
+    width: 1000px;
+    height: 500px;
+    margin-bottom: 1px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #f0f0f0;
+    top: 10px;
+}
+
+.footer p {
+    text-align: center;
+    line-height: 22px;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 11.0pt;
+    font-weight: 500;
+    padding: 20px;
+}
+  
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+  
+  .copyright p {
+    display: inline-block;
+    margin-right: -15px;
+}
+  
+.copyright span {
+    font-size: 12pt;
+}
+  
+.copyright a {
+    display: flex;
+}
+  
+.copyright > a img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.copyright img:last-child {
+    margin-left: 5px;
+}
+
+
+.h2links {
+    margin-bottom: 45px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #990000;
+    font-size: 65pt;
+}
+  
+.links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+.links > h2 {
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: center;
+    font-size: 16pt;
+    padding: 30px;
+    margin-bottom: -15px;
+}
+  
+.links > a {
+    font-family: 'Roboto Mono', sans-serif;
+    color: #c84b43;
+    font-size: 14pt;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+  
+.links > p {
+    margin-bottom: 20px;
+}
+  
+.links a:hover {
+    font-size: 16pt;
+}
+  
+.h2sobre {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #990000;
+    font-size: 65pt;
+}
+  
+.sobre {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px;
+}
+  
+.sobre p {
+    font-family: 'Roboto Mono', Arial;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 13.999999999999998pt;
+    word-wrap: break-word;
+    padding: 8px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+  
+.sobre p:hover {
+    font-weight: 600;
+}
+  
